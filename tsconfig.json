@@ -5,6 +5,7 @@
         // "typeRoots": ["node_modules/@types"],
         "target": "es6",
         "moduleResolution": "node",
+        "resolveJsonModule": true,
         "sourceMap": true,
         "outDir": "dist"
     },

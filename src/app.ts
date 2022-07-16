@@ -2,7 +2,18 @@ import express, { Express } from 'express';
 import defaultMiddleware from './middlewares/index';
 import defaultRouter from './routes';
 
+const swaggerUI = require('swagger-ui-express');
+const swaggerJsDoc = require('swagger-jsdoc');
+import * as swaggerJson from '../swagger.json';
+const options = {
+    definition: swaggerJson,
+    apis: ["./routes/*.ts"]
+}
+const specs = swaggerJsDoc(options);
+
 const app: Express = express();
+
+app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs));
 
 const hostname = 'localhost';
 const port = process.env.PORT || 5000;

@@ -4,7 +4,7 @@ import userServices from '../../services/index';
 
 const getUserById = async (req: Request, res: Response) => {
   try {
-    const user: IUser = await userServices.getUser(Number(req.params.id));
+    const user: IUser = await userServices.getUserById(Number(req.params.id));
     if (!user) {
         return res.status(404).json({
             message: "User not found",

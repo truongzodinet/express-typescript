@@ -1,7 +1,7 @@
 import { readFileJson } from '../helpers';
 import { IUser } from '../interfaces/users';
 
-const getUser = async (id:number): Promise<IUser | null> => {
+const getUserById = async (id:number): Promise<IUser | null> => {
   try {
     const listUsers: IUser[] = await readFileJson(process.env.FILE_NAME as string);
     const user = listUsers.find((user) => user.id === +id);
@@ -11,4 +11,4 @@ const getUser = async (id:number): Promise<IUser | null> => {
   }
 };
 
-export default getUser;
+export default getUserById;
