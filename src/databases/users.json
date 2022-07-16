@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "name": "nguyen van a",
+        "password": "123456",
+        "role": "user",
+        "isSubcribed": true
+        
+    },
+    {
+        "id": 2,
+        "name": "nguyen van b",
+        "password": "345678",
+        "role": "seller",
+        "isSubcribed": true
+        
+    },
+    {
+        "id": 3,
+        "name": "nguyen van c",
+        "password": "567890",
+        "role": "admin",
+        "isSubcribed": false
+        
+    }
+]
