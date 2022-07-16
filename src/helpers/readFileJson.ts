@@ -4,10 +4,7 @@ import { IUser } from '../interfaces/users';
 
 export const readFileJson = async (fileName: string) => {
   try {
-    const listUsers: string = await fs.readFileSync(
-      path.join(__dirname, `../databases/${fileName}.json`),
-      'utf8',
-    );
+    const listUsers: string = await fs.readFileSync(path.join(__dirname, `../databases/${fileName}.json`), 'utf8');
     
     const data: IUser[] = JSON.parse(listUsers);
 
