@@ -7,12 +7,12 @@ const login = async (req: Request, res: Response) => {
     const body: ILoginUser= req.body;
     const { name, password } = body;
 
-    const listUsers: IUser[] | IUser | null = await userServices.getUser(
-      name as string,
-      password as string,
-    );
+    // const listUsers: IUser[] | IUser | null = await userServices.getUser(
+    //   name as string,
+    //   password as string,
+    // );
 
-    res.send(listUsers);
+    // res.send(listUsers);
   } catch (error: unknown) {
     throw new Error(error as string);
   }

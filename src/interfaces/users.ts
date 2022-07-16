@@ -1,10 +1,10 @@
 export interface IUser {
     id: number;
-	role: string;
-	name: string;
-	email: string;
-	password: string;
-	isSubcribed: boolean;
+	role?: string;
+	name?: string;
+	email?: string;
+	password?: string;
+	isSubcribed?: boolean;
 }
 
 export interface ILoginUser {
